@@ -1,2 +1,8 @@
-# RBLX_React_LSP_Extension
-Extension for Visual Studio Code that helps with auto complete suggestions for roblox's React implementation.
+# RBLX React LSP
+
+Provides auto-complete suggestions for instances and their properties when using Roact.createElement in Lua/Luau files.
+
+## Features
+
+- Provides auto completion suggestions for instance's properties
+- Provides auto completion suggestions for instance's names
