@@ -18,6 +18,7 @@
     "type": "git",
     "url": "https://github.com/OtadTOAD/RBLX_React_LSP_Extension.git"
   },
+  "publisher": "OtadTOAD",
   "contributes": {
     "commands": [
       {
