@@ -29,7 +29,7 @@ export function activate(context: vscode.ExtensionContext) {
 	const lspLogChannel = vscode.window.createOutputChannel("React LSP Logs");
 
 	const serverPath = context.asAbsolutePath(
-		//path.join('..', 'lsp-server', 'target', 'debug', 'React_LSP.exe')
+		//path.join('..', 'RBLX_React_LSP_Backend', 'target', 'debug', 'React_LSP.exe')
 		path.join('server', 'React_LSP.exe')
 	);
 	const serverOpts: ServerOptions = {

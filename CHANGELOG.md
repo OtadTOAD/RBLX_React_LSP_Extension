@@ -16,3 +16,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Added icon
 - Improved README
+
+## [0.0.5]
+
+### Fixed
+
+- Parentheses inside createElement caused the regex to break
+- Removed unnecessary server files to reduce size.
