@@ -29,3 +29,8 @@ Whenever your text cursor is within `Context` span, LSP will provide auto comple
 * If the cursor is within the **first set of brackets** and **not** on **the right side of an equals sign** (on the same line), it will try to:
     * Look up the instance using name you entered in the first quotes.
     * Provide its **properties** from Roblox's API dump, if found.
+
+## Repositories
+
+- **Frontend:** [VS Code Extension](https://github.com/OtadTOAD/RBLX_React_LSP_Extension.git)
+- **Backend:** [LSP Server](https://github.com/OtadTOAD/RBLX_React_LSP_Backend.git)
