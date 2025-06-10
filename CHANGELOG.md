@@ -6,4 +6,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
-- Initial release
+- Added command for download API dump.
+- Added auto complete suggestions for instance names.
+- Added auto complete suggestions for instance properties.
+
+## [0.0.4]
+
+### Added
+
+- Added icon
+- Improved README
