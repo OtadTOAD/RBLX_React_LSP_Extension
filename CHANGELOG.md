@@ -23,3 +23,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Parentheses inside createElement caused the regex to break
 - Removed unnecessary server files to reduce size.
+
+## [0.0.6]
+
+### Changed
+
+- Added `Programming Languages` category
