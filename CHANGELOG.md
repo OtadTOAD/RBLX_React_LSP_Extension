@@ -34,3 +34,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Added `Programming Languages` category
 - Changed command name from `Generate metadata` to `Generate API Metadata`
+
+## [0.0.7]
+
+### Changed
+
+- Fixed issue where this LSP interfered with other LSPs by limiting capabilities to only what’s needed
