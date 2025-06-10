@@ -9,7 +9,7 @@ Provides auto-complete suggestions for instances and their properties when using
 
 ## How to Use
 
-**IMPORTANT: Make sure to use the `Generate metadata` command (rblx-react-lsp.genMetadata) from Command Palette on first use or whenever you want to update API cache.**
+**IMPORTANT: Make sure to use the `Generate API Metadata` command (rblx-react-lsp.genMetadata) from Command Palette on first use or whenever you want to update API cache.**
 
 This extension detects whenever any variable is assigned a value matching the pattern `require(Anything.React)`.
 <details>

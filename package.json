@@ -24,7 +24,7 @@
   "contributes": {
     "commands": [
       {
-        "title": "Generate metadata",
+        "title": "Generate API Metadata",
         "command": "rblx-react-lsp.genMetadata"
       }
     ],

@@ -26,6 +26,11 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [0.0.6]
 
+### Added
+
+- Includes API cache by default
+
 ### Changed
 
 - Added `Programming Languages` category
+- Changed command name from `Generate metadata` to `Generate API Metadata`
