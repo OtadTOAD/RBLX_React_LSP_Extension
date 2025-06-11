@@ -24,8 +24,14 @@
   "contributes": {
     "commands": [
       {
-        "title": "Generate API Metadata",
+        "title": "OTAD: Generate and Cache API Metadata in EXE Dir",
+        "shortTitle": "Generate Metadata",
         "command": "rblx-react-lsp.genMetadata"
+      },
+      {
+        "title": "OTAD: Download and Prettify API as JSON in current Workspace",
+        "shortTitle": "Generate JSON",
+        "command": "rblx-react-lsp.readCache"
       }
     ],
     "languages": [

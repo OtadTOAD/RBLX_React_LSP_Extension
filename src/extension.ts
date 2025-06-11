@@ -29,8 +29,8 @@ export function activate(context: vscode.ExtensionContext) {
 	const lspLogChannel = vscode.window.createOutputChannel("React LSP Logs");
 
 	const serverPath = context.asAbsolutePath(
-		//path.join('..', 'RBLX_React_LSP_Backend', 'target', 'debug', 'React_LSP.exe')
-		path.join('server', 'React_LSP.exe')
+		path.join('..', 'RBLX_React_LSP_Backend', 'target', 'debug', 'React_LSP.exe')
+		//path.join('server', 'React_LSP.exe')
 	);
 	const serverOpts: ServerOptions = {
 		run: { command: serverPath, transport: TransportKind.stdio },
@@ -60,6 +60,20 @@ export function activate(context: vscode.ExtensionContext) {
 			lspLogChannel.appendLine(logLine);
 		});
 		lspLogChannel.show(true);
+
+		vscode.commands.registerCommand('rblx-react-lsp.readCache', async () => {
+			const folders = vscode.workspace.workspaceFolders;
+			if (!folders || folders.length === 0) {
+				vscode.window.showErrorMessage("No workspace folder open.");
+				return;
+			}
+			const workspacePath = folders[0].uri.fsPath;
+
+			await client.sendRequest("workspace/executeCommand", {
+				command: "rblx-react-lsp.readCache",
+				arguments: [workspacePath]
+			});
+		});
 
 		console.log(`Client ${ver} started!`);
 	});
