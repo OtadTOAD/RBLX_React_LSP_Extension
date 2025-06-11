@@ -52,3 +52,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Using Spawn now during init for async loading
 - Now using .bin instead of .json when saving cache
+
+## [0.1.1]
+
+### Added
+
+- Added warning when you open extension for first time.
