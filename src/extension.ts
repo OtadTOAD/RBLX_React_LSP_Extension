@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import path from 'path';
 import { LanguageClient, LanguageClientOptions, LogMessageParams, ServerOptions, TransportKind, MessageType } from 'vscode-languageclient/node';
+import { warn } from 'console';
 
 // Just for debuggin so I know changes got thru
 const ver = "V7";
@@ -76,6 +77,14 @@ export function activate(context: vscode.ExtensionContext) {
 		});
 
 		console.log(`Client ${ver} started!`);
+
+		// Warn first time users about metadata chache
+		const warnedKey = "rblxReactLSP.warnedToRunCacheCommand";
+		const warned = context.globalState.get<boolean>(warnedKey, false);
+		if (!warn) {
+			vscode.window.showWarningMessage("Please run `OTAD: Generate and Cache API Metadata in EXE Dir` command (rblx-react-lsp.genMetadata) to init the cache.");
+			context.globalState.update(warnedKey, true);
+		}
 	});
 	context.subscriptions.push(client);
 }
