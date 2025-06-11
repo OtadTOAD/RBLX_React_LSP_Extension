@@ -40,3 +40,15 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Changed
 
 - Fixed issue where this LSP interfered with other LSPs by limiting capabilities to only what’s needed
+
+## [0.1.0]
+
+### Added
+
+- New command for generating API as pretty json for personal use
+- Suggestions are now sorted by frequency, length, and lexicographical order.
+
+### Changed
+
+- Using Spawn now during init for async loading
+- Now using .bin instead of .json when saving cache
