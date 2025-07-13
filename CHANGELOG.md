@@ -63,3 +63,4 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Fixed bug where extension stole "language id" so other LSP extensions wouldn't run properly alongside it.
 (I had to make this extension run on all files for this, so disable this extension when not in use)
+- Added example .gif to showcase how LSP works.

@@ -19,6 +19,10 @@ This extension detects whenever any variable is assigned a value matching the pa
 </details>
 If this pattern is not detected, the LSP will not provide auto completion suggestions.
 
+## Example
+
+![Extension Example](https://imgur.com/a/extension-example-uTIjnJQ)
+
 **Warning: If you have multiple assignments, only _first one_ will be treated as valid for simplicty.** 
 
 Once the variable is found, its name will be used to identify patterns like `name.createElement(Context)`
