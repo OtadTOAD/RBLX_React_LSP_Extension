@@ -2,7 +2,7 @@
   "name": "rblx-react-lsp",
   "displayName": "RBLX React LSP",
   "description": "",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.97.0"
   },
@@ -11,7 +11,7 @@
     "Other"
   ],
   "activationEvents": [
-    "onLanguage:lua",
+    "onLanguage",
     "workspaceContains:/*.project.json"
   ],
   "main": "./out/extension.js",
@@ -32,18 +32,6 @@
         "title": "OTAD: Download and Prettify API as JSON in current Workspace",
         "shortTitle": "Generate JSON",
         "command": "rblx-react-lsp.readCache"
-      }
-    ],
-    "languages": [
-      {
-        "id": "lua",
-        "aliases": [
-          "Luau"
-        ],
-        "extensions": [
-          ".lua",
-          ".luau"
-        ]
       }
     ]
   },

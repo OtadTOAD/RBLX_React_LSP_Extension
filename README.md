@@ -10,6 +10,7 @@ Provides auto-complete suggestions for instances and their properties when using
 ## How to Use
 
 **IMPORTANT: Make sure to use the `OTAD: Generate and Cache API Metadata in EXE Dir` command (rblx-react-lsp.genMetadata) from Command Palette on first use or whenever you want to update API cache.**
+**IMPORTANT: This extension runs on every file as I couldn't make it work properly alongside other LSPs otherwise, please only activate by workspace where it's needed.**
 
 This extension detects whenever any variable is assigned a value matching the pattern `require(Anything.React)`.
 <details>

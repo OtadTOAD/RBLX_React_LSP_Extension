@@ -58,3 +58,8 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Added
 
 - Added warning when you open extension for first time.
+
+## [0.1.2]
+
+- Fixed bug where extension stole "language id" so other LSP extensions wouldn't run properly alongside it.
+(I had to make this extension run on all files for this, so disable this extension when not in use)
