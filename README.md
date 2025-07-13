@@ -21,7 +21,7 @@ If this pattern is not detected, the LSP will not provide auto completion sugges
 
 ## Example
 
-![Extension Example](https://imgur.com/a/extension-example-uTIjnJQ)
+![Extension Example](https://i.imgur.com/hd4ObAg.gif)
 
 **Warning: If you have multiple assignments, only _first one_ will be treated as valid for simplicty.** 
 
