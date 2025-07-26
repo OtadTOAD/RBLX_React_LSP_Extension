@@ -74,3 +74,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Removed
 
 - Removed '{' character triggering auto complete menu automatically, it was annoying when using .createElement method.
+
+## [0.2.1]
+
+### Fixed
+
+- Accidentally removed superclass merging it's properties/events in version 0.2.0 and put it back.
