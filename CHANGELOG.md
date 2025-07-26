@@ -64,3 +64,13 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Fixed bug where extension stole "language id" so other LSP extensions wouldn't run properly alongside it.
 (I had to make this extension run on all files for this, so disable this extension when not in use)
 - Added example .gif to showcase how LSP works.
+
+## [0.2.0]
+
+### Added
+
+- Added auto complete for instance events(For some reason roblox api dump lacks some events, I have no idea how to fix that like .Activated for UI elements).
+
+### Removed
+
+- Removed '{' character triggering auto complete menu automatically, it was annoying when using .createElement method.
