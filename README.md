@@ -5,11 +5,13 @@ Provides auto-complete suggestions for instances and their properties when using
 ## Features
 
 - Provides auto completion suggestions for instance's properties
+- Provides auto completion suggestions for instance's events
 - Provides auto completion suggestions for instance's names
 
 ## How to Use
 
 **IMPORTANT: Make sure to use the `OTAD: Generate and Cache API Metadata in EXE Dir` command (rblx-react-lsp.genMetadata) from Command Palette on first use or whenever you want to update API cache.**
+
 **IMPORTANT: This extension runs on every file as I couldn't make it work properly alongside other LSPs otherwise, please only activate by workspace where it's needed.**
 
 This extension detects whenever any variable is assigned a value matching the pattern `require(Anything.React)`.
@@ -36,6 +38,9 @@ Whenever your text cursor is within `Context` span, LSP will provide auto comple
 * If the cursor is within the **first set of brackets** and **not** on **the right side of an equals sign** (on the same line), it will try to:
     * Look up the instance using name you entered in the first quotes.
     * Provide its **properties** from Roblox's API dump, if found.
+* If the cursor is within the **first set of brackets** and then inside **set of square brackets** it will try to
+    * Look up the instance using name you entered in the first quotes.
+    * Provide its **events** from Roblox's API dump, if found.
 
 ## Repositories
 

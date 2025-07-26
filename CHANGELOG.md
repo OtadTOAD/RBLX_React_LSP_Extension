@@ -80,3 +80,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Fixed
 
 - Accidentally removed superclass merging it's properties/events in version 0.2.0 and put it back.
+
+## [0.2.2]
+
+### Changed
+
+- Updated ReadMe to include new feature.
+- Added 'Keywords' for easier search of the extension.

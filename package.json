@@ -1,8 +1,20 @@
 {
   "name": "rblx-react-lsp",
   "displayName": "RBLX React LSP",
-  "description": "",
-  "version": "0.2.1",
+  "description": "LSP for Roblox when using React module in any Lua/Luau files.",
+  "version": "0.2.2",
+  "keywords": [
+    "roblox",
+    "luau",
+    "lua",
+    "rblx",
+    "rbx",
+    "roblox-studio",
+    "react",
+    "roblox react",
+    "lsp",
+    "language server protocol"
+  ],
   "engines": {
     "vscode": "^1.97.0"
   },
