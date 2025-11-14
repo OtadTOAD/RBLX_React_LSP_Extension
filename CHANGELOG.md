@@ -87,3 +87,18 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 - Updated ReadMe to include new feature.
 - Added 'Keywords' for easier search of the extension.
+
+## [0.2.3]
+
+### Fixed
+
+- Changed brackets('{}', '[]') being solved using regex and instead they now use same method as normal parentheses. This caused issues with stacking elements.
+
+### Added
+
+- LSP now supports ability to define macros for .createElement instead of having to directly use it from React variable.
+    `local e = React.createElement` did not work and was ignored by LSP before.
+
+### Changed
+
+- Fixed binary bloat a bit and made server bit smaller.
