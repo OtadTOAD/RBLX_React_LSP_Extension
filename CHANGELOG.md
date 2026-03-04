@@ -130,3 +130,14 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Changed
 
 - Added some things to .vscodeignore
+
+## [0.3.3]
+
+### Added
+
+- Version checking to cache.
+    - Will now provide user with notification to update their cache if it's stale.
+
+### Changed
+
+- Changed README.md and package.json.

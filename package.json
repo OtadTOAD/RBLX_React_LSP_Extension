@@ -1,26 +1,21 @@
 {
   "name": "rblx-react-lsp",
-  "displayName": "RBLX React LSP",
-  "description": "LSP for Roblox when using React module in any Lua/Luau files.",
-  "version": "0.3.2",
+  "displayName": "Roblox React LSP: Luau IntelliSense",
+  "description": "IntelliSense and autocomplete for Roblox instances, properties, and events in React-Luau projects.",
+  "version": "0.3.3",
   "keywords": [
-    "roblox",
-    "luau",
-    "lua",
-    "rblx",
-    "rbx",
-    "roblox-studio",
-    "react",
-    "roblox react",
-    "lsp",
-    "language server protocol"
+    "Roblox",
+    "Luau",
+    "React",
+    "IntelliSense",
+    "Roact"
   ],
   "engines": {
     "vscode": "^1.97.0"
   },
   "categories": [
     "Programming Languages",
-    "Other"
+    "Snippets"
   ],
   "activationEvents": [
     "onLanguage",
@@ -36,12 +31,12 @@
   "contributes": {
     "commands": [
       {
-        "title": "OTAD: Generate and Cache API Metadata in EXE Dir",
+        "title": "RBLX React: Generate and Cache API Metadata",
         "shortTitle": "Generate Metadata",
         "command": "rblx-react-lsp.genMetadata"
       },
       {
-        "title": "OTAD: Download and Prettify API as JSON in current Workspace",
+        "title": "RBLX React: Download and Prettify API as JSON",
         "shortTitle": "Generate JSON",
         "command": "rblx-react-lsp.readCache"
       }

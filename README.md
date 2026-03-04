@@ -1,49 +1,62 @@
-# RBLX React LSP
+# Roblox React LSP: IntelliSense & Autocomplete for Luau
 
-Provides auto-complete suggestions for instances and their properties when using React.createElement in Lua/Luau files.
+![Visual Studio Marketplace Version](https://img.shields.io/visual-studio-marketplace/v/OtadTOAD.rblx-react-lsp)
+
+Auto-complete for Roblox instances, properties, and events inside `React.createElement` calls in Luau.
+
+![Extension Example](https://i.imgur.com/dR64GKP.gif)
 
 ## Features
+- Instance name suggestions inside `createElement` (Part, Frame, UIStroke, etc.)
+- Property IntelliSense pulled directly from the Roblox API
+- Event suggestions inside `[React.Event.X]`
+- Property change suggestions inside `[React.Change.X]`
+- Results ranked by how frequently you use them in the current file
+- Works with `createElement` macros like `local e = React.createElement`
 
-- Provides auto completion suggestions for instance's properties
-- Provides auto completion suggestions for instance's events
-- Provides auto completion suggestions for instance's names
+## Setup
+On first install, run the **Generate and Cache API Metadata** command to download and cache the Roblox API:
+1. Open Command Palette (`Ctrl+Shift+P`)
+2. Search for `RBLX React: Generate and Cache API Metadata`
+3. Wait for the success notification in the bottom left
 
-## How to Use
+Run this again whenever you want the latest Roblox API changes.
 
-**IMPORTANT: Make sure to use the `OTAD: Generate and Cache API Metadata in EXE Dir` command (rblx-react-lsp.genMetadata) from Command Palette on first use or whenever you want to update API cache.**
+> **Tip:** If completions don't appear automatically, press `Ctrl+Space` to trigger them manually, especially useful inside quotes when typing instance names.
 
-**IMPORTANT: This extension runs on every file as I couldn't make it work properly alongside other LSPs otherwise, please only activate by workspace where it's needed.**
+## Usage
 
-This extension detects whenever any variable is assigned a value matching the pattern `require(Anything.React)`.
-<details>
-  <summary>For context</summary>
-  `Anything` here could be any string, but must be at least one character.
-</details>
-If this pattern is not detected, the LSP will not provide auto completion suggestions.
+The extension activates when it detects a React require anywhere in your file (case-insensitive):
+```lua
+local React = require(somewhere.React)
+```
 
-## Example
+Completions trigger automatically inside `createElement` calls:
+```lua
+React.createElement("Fra|")               -- Roblox instance names
+React.createElement("Frame", { Vis|  })   -- instance properties
+React.createElement("Frame", {
+    [React.Event.Mo|]                      -- instance events
+})
+React.createElement("Frame", {
+    [React.Change.Vi|]                     -- property change listeners
+})
+```
 
-![Extension Example](https://i.imgur.com/hd4ObAg.gif)
+Supports `createElement` macros too:
+```lua
+local e = React.createElement
+e("Frame", { Vis| })  -- works the same
+```
 
-**Warning: If you have multiple assignments, only _first one_ will be treated as valid for simplicty.** 
+## Compatibility
+- Works alongside **Luau LSP** and **Roblox LSP**, enable per-workspace to avoid conflicts with other language servers
+- Built for **Rojo**-based workflows where React-Luau/Roact is required from a package
 
-Once the variable is found, its name will be used to identify patterns like `name.createElement(Context)`
-<details>
-  <summary>For context</summary>
-  `name` here must be equal to variable name.
-</details>
-
-Whenever your text cursor is within `Context` span, LSP will provide auto complete suggestions.
-* If the cursor is within the **first quotes**, it will suggest Roblox **instance names**.
-* If the cursor is within the **first set of brackets** and **not** on **the right side of an equals sign** (on the same line), it will try to:
-    * Look up the instance using name you entered in the first quotes.
-    * Provide its **properties** from Roblox's API dump, if found.
-* If the cursor is within the **first set of brackets** and then inside **set of square brackets** it will try to
-    * Look up the instance using name you entered in the first quotes.
-    * Provide its **events** from Roblox's API dump, if it starts '.Event.'
-    * Provide its **properties** from Roblox's API dump, if it starts '.Change.'
+## Notes
+- Only the **first** `require(...React)` in a file is used as the React variable
+- The extension currently activates on all Lua/Luau files, it's recommended to enable it per-workspace only where Roblox React is used
 
 ## Repositories
-
-- **Frontend:** [VS Code Extension](https://github.com/OtadTOAD/RBLX_React_LSP_Extension.git)
-- **Backend:** [LSP Server](https://github.com/OtadTOAD/RBLX_React_LSP_Backend.git)
+- [VS Code Extension](https://github.com/OtadTOAD/RBLX_React_LSP_Extension)
+- [LSP Server (Rust)](https://github.com/OtadTOAD/RBLX_React_LSP_Backend)
