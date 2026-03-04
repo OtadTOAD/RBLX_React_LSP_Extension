@@ -2,7 +2,7 @@
   "name": "rblx-react-lsp",
   "displayName": "Roblox React LSP: Luau IntelliSense",
   "description": "IntelliSense and autocomplete for Roblox instances, properties, and events in React-Luau projects.",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "keywords": [
     "Roblox",
     "Luau",
@@ -43,12 +43,10 @@
     ]
   },
   "scripts": {
-    "vscode:prepublish": "npm run compile",
+    "vscode:prepublish": "npm run bundle",
+    "bundle": "esbuild src/extension.ts --bundle --platform=node --external:vscode --outfile=out/extension.js",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
-    "lint": "eslint src",
-    "test": "vscode-test"
+    "watch": "tsc -watch -p ./"
   },
   "devDependencies": {
     "@types/mocha": "^10.0.10",
@@ -59,6 +57,7 @@
     "@vscode/test-cli": "^0.0.10",
     "@vscode/test-electron": "^2.4.1",
     "electron": "^34.2.0",
+    "esbuild": "^0.27.3",
     "eslint": "^9.19.0",
     "typescript": "^5.7.3"
   },

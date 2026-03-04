@@ -141,3 +141,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Changed
 
 - Changed README.md and package.json.
+
+## [0.3.4]
+
+### Fixed
+
+- Removed node_modules incorrectly from bundle.
