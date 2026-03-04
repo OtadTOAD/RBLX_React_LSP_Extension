@@ -2,7 +2,7 @@
   "name": "rblx-react-lsp",
   "displayName": "RBLX React LSP",
   "description": "LSP for Roblox when using React module in any Lua/Luau files.",
-  "version": "0.2.2",
+  "version": "0.3.1",
   "keywords": [
     "roblox",
     "luau",

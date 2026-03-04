@@ -40,7 +40,8 @@ Whenever your text cursor is within `Context` span, LSP will provide auto comple
     * Provide its **properties** from Roblox's API dump, if found.
 * If the cursor is within the **first set of brackets** and then inside **set of square brackets** it will try to
     * Look up the instance using name you entered in the first quotes.
-    * Provide its **events** from Roblox's API dump, if found.
+    * Provide its **events** from Roblox's API dump, if it starts '.Event.'
+    * Provide its **properties** from Roblox's API dump, if it starts '.Change.'
 
 ## Repositories
 

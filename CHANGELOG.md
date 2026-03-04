@@ -102,3 +102,31 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Changed
 
 - Fixed binary bloat a bit and made server bit smaller.
+
+## [0.3.0]
+
+### Fixed
+
+- Using 'genMetadata' command doing nothing.
+- Assignment checks failing when seeing ==/~=/<=/>=
+- Nested groups(Brackets like { {} }) not being properly accounted for and messing up context checks.
+    - Will now only give you suggestions in valid bracket.
+- Brackets not being checked properly which detected invalid patterns such as ["String"].
+
+### Added
+
+- Now will provide suggestions for [React.Change.Property] pattern.
+- Feedback messages when using extension commands.
+
+### Changed
+
+- Now downloads API dump from 'clientsettingscdn.roblox.com' instead of 'setup.rbxcdn.com'(Will fallback to this if first one fails)
+    - This should provide more up to date data.
+- Now suggestions provided by this extension will have much higher priority.
+- Now will no longer take capitalization into account when checking for React package(So you can have .react for example)
+
+## [0.3.1]
+
+### Changed
+
+- Added some things to .vscodeignore
