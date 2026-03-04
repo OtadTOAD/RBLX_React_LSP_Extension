@@ -125,7 +125,7 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 - Now suggestions provided by this extension will have much higher priority.
 - Now will no longer take capitalization into account when checking for React package(So you can have .react for example)
 
-## [0.3.1]
+## [0.3.2]
 
 ### Changed
 
