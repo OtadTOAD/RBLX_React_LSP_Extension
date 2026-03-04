@@ -147,3 +147,9 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 ### Fixed
 
 - Removed node_modules incorrectly from bundle.
+
+## [0.3.5]
+
+### Changed
+
+- Changed gif in example

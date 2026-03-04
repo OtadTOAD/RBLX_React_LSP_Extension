@@ -2,7 +2,7 @@
   "name": "rblx-react-lsp",
   "displayName": "Roblox React LSP: Luau IntelliSense",
   "description": "IntelliSense and autocomplete for Roblox instances, properties, and events in React-Luau projects.",
-  "version": "0.3.4",
+  "version": "0.3.5",
   "keywords": [
     "Roblox",
     "Luau",

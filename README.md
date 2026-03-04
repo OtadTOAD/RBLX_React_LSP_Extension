@@ -4,7 +4,7 @@
 
 Auto-complete for Roblox instances, properties, and events inside `React.createElement` calls in Luau.
 
-![Extension Example](https://i.imgur.com/dR64GKP.gif)
+![Extension Example](https://i.imgur.com/4s1UrKs.gif)
 
 ## Features
 - Instance name suggestions inside `createElement` (Part, Frame, UIStroke, etc.)
